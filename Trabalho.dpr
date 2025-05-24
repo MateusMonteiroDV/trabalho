@@ -2,13 +2,15 @@ program Trabalho;
 
 uses
   Vcl.Forms,
-  Login in 'Login.pas' {Form1};
+  Login in 'Login.pas' {F_login},
+  Menu in 'Menu.pas' {F_Menu};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TF_login, F_login);
+  Application.CreateForm(TF_Menu, F_Menu);
   Application.Run;
 end.
