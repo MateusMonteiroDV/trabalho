@@ -26,6 +26,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     procedure B_logarClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,6 +71,11 @@ begin
         end
 
 
+end;
+
+procedure TF_login.FormDestroy(Sender: TObject);
+begin
+    Application.Terminate;
 end;
 
 end.

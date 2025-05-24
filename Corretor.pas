@@ -30,8 +30,10 @@ type
     Q_dado_corretorid: TIntegerField;
     Q_dado_corretornome: TWideStringField;
     Q_dado_corretorsenha: TIntegerField;
+    B_voltar: TButton;
     procedure FormShow(Sender: TObject);
     procedure B_corretorClick(Sender: TObject);
+    procedure B_voltarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,6 +75,17 @@ begin
     end;
 
 
+end;
+
+procedure TF_corretor.B_voltarClick(Sender: TObject);
+var
+menu : TF_Menu;
+
+begin
+    Self.Hide;
+    menu := TF_Menu.Create(nil);
+    menu.ShowModal;
+    menu.Free;
 end;
 
 procedure TF_corretor.FormShow(Sender: TObject);

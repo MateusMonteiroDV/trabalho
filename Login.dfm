@@ -11,6 +11,7 @@ object F_login: TF_login
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesigned
+  OnDestroy = FormDestroy
   TextHeight = 19
   object Label1: TLabel
     Left = 132

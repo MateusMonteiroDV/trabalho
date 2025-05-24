@@ -13,7 +13,7 @@ object F_corretor: TF_corretor
   OnShow = FormShow
   TextHeight = 15
   object Label1: TLabel
-    Left = 136
+    Left = 200
     Top = 104
     Width = 31
     Height = 15
@@ -21,7 +21,7 @@ object F_corretor: TF_corretor
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 136
+    Left = 200
     Top = 152
     Width = 23
     Height = 15
@@ -29,7 +29,7 @@ object F_corretor: TF_corretor
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 136
+    Left = 200
     Top = 59
     Width = 31
     Height = 15
@@ -69,8 +69,8 @@ object F_corretor: TF_corretor
       end>
   end
   object DBEdit1: TDBEdit
-    Left = 136
-    Top = 120
+    Left = 200
+    Top = 123
     Width = 154
     Height = 23
     DataField = 'senha'
@@ -78,7 +78,7 @@ object F_corretor: TF_corretor
     TabOrder = 1
   end
   object DBEdit2: TDBEdit
-    Left = 136
+    Left = 200
     Top = 168
     Width = 154
     Height = 23
@@ -87,8 +87,8 @@ object F_corretor: TF_corretor
     TabOrder = 2
   end
   object DBEdit3: TDBEdit
-    Left = 136
-    Top = 75
+    Left = 200
+    Top = 80
     Width = 154
     Height = 23
     DataField = 'nome'
@@ -96,13 +96,22 @@ object F_corretor: TF_corretor
     TabOrder = 3
   end
   object B_corretor: TButton
-    Left = 136
+    Left = 200
     Top = 224
     Width = 154
     Height = 25
     Caption = 'B_corretor'
     TabOrder = 4
     OnClick = B_corretorClick
+  end
+  object B_voltar: TButton
+    Left = 8
+    Top = 16
+    Width = 97
+    Height = 25
+    Caption = 'voltar'
+    TabOrder = 5
+    OnClick = B_voltarClick
   end
   object Q_corretor: TFDQuery
     Active = True
@@ -142,8 +151,8 @@ object F_corretor: TF_corretor
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'SELECT * FROM corretor;')
-    Left = 376
-    Top = 120
+    Left = 96
+    Top = 216
     object Q_dado_corretorid: TIntegerField
       FieldName = 'id'
       Origin = 'id'
