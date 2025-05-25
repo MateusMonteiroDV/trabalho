@@ -37,7 +37,7 @@ var
   F_login: TF_login;
 
 implementation
-uses Menu, Imovel,Corretor;
+uses Menu, Imovel,Corretor, Cliente;
 {$R *.dfm}
 
 procedure TF_login.B_logarClick(Sender: TObject);

@@ -45,6 +45,7 @@ object F_Menu: TF_Menu
       Height = 25
       Caption = 'Cadastrar cliente'
       TabOrder = 2
+      OnClick = Button3Click
     end
     object Button4: TButton
       Left = 234

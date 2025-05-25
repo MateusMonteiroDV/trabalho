@@ -5,7 +5,8 @@ uses
   Login in 'Login.pas' {F_login},
   Menu in 'Menu.pas' {F_Menu},
   Corretor in 'Corretor.pas' {F_corretor},
-  Imovel in 'Imovel.pas' {F_imovel};
+  Imovel in 'Imovel.pas' {F_imovel},
+  Cliente in 'Cliente.pas' {F_cliente};
 
 {$R *.res}
 
