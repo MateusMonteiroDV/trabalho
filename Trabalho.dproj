@@ -105,6 +105,10 @@
             <Form>F_corretor</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Imovel.pas">
+            <Form>F_imovel</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

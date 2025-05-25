@@ -18,7 +18,8 @@ object F_Menu: TF_Menu
     Height = 441
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = -8
+    ExplicitWidth = 622
+    ExplicitHeight = 433
     object Button1: TButton
       Left = 234
       Top = 120
@@ -35,6 +36,7 @@ object F_Menu: TF_Menu
       Height = 25
       Caption = 'Cadastrar imovel'
       TabOrder = 1
+      OnClick = Button2Click
     end
     object Button3: TButton
       Left = 234

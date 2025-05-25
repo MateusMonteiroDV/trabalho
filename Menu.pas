@@ -15,6 +15,7 @@ type
     Button4: TButton;
     Button5: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,7 +26,7 @@ var
   F_Menu: TF_Menu;
 
 implementation
- uses Corretor;
+ uses Corretor, Imovel;
 {$R *.dfm}
 
 procedure TF_Menu.Button1Click(Sender: TObject);
@@ -37,6 +38,19 @@ begin
    corretor := TF_corretor.Create(nil);
    corretor.ShowModal;
    corretor.Free;
+
+end;
+
+
+procedure TF_Menu.Button2Click(Sender: TObject);
+var
+  imovel :   TF_imovel;
+
+begin
+    Self.Hide;
+    imovel := TF_imovel.Create(nil);
+    imovel.ShowModal;
+    imovel.free;
 
 end;
 

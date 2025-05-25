@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   Login in 'Login.pas' {F_login},
   Menu in 'Menu.pas' {F_Menu},
-  Corretor in 'Corretor.pas' {F_corretor};
+  Corretor in 'Corretor.pas' {F_corretor},
+  Imovel in 'Imovel.pas' {F_imovel};
 
 {$R *.res}
 
