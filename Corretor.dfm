@@ -13,27 +13,27 @@ object F_corretor: TF_corretor
   OnShow = FormShow
   TextHeight = 15
   object Label1: TLabel
-    Left = 200
-    Top = 104
-    Width = 31
-    Height = 15
-    Caption = 'senha'
-    FocusControl = DBEdit1
-  end
-  object Label2: TLabel
-    Left = 200
-    Top = 152
-    Width = 23
-    Height = 15
-    Caption = 'cred'
-    FocusControl = DBEdit2
-  end
-  object Label3: TLabel
-    Left = 200
-    Top = 59
+    Left = 224
+    Top = 64
     Width = 31
     Height = 15
     Caption = 'nome'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel
+    Left = 224
+    Top = 110
+    Width = 31
+    Height = 15
+    Caption = 'senha'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel
+    Left = 224
+    Top = 160
+    Width = 23
+    Height = 15
+    Caption = 'cred'
     FocusControl = DBEdit3
   end
   object DBGrid1: TDBGrid
@@ -52,56 +52,30 @@ object F_corretor: TF_corretor
     Columns = <
       item
         Expanded = False
-        FieldName = 'id'
+        FieldName = 'cred'
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nome'
-        Width = 100
+        Width = 200
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'senha'
-        Width = 100
+        Width = 200
         Visible = True
       end>
   end
-  object DBEdit1: TDBEdit
-    Left = 200
-    Top = 123
-    Width = 154
-    Height = 23
-    DataField = 'senha'
-    DataSource = D_corretor
-    TabOrder = 1
-  end
-  object DBEdit2: TDBEdit
-    Left = 200
-    Top = 168
-    Width = 154
-    Height = 23
-    DataField = 'id'
-    DataSource = D_corretor
-    TabOrder = 2
-  end
-  object DBEdit3: TDBEdit
-    Left = 200
-    Top = 80
-    Width = 154
-    Height = 23
-    DataField = 'nome'
-    DataSource = D_corretor
-    TabOrder = 3
-  end
   object B_corretor: TButton
-    Left = 200
-    Top = 224
+    Left = 248
+    Top = 232
     Width = 154
     Height = 25
     Caption = 'B_corretor'
-    TabOrder = 4
+    TabOrder = 1
     OnClick = B_corretorClick
   end
   object B_voltar: TButton
@@ -110,30 +84,56 @@ object F_corretor: TF_corretor
     Width = 97
     Height = 25
     Caption = 'voltar'
-    TabOrder = 5
+    TabOrder = 2
     OnClick = B_voltarClick
   end
+  object DBEdit1: TDBEdit
+    Left = 224
+    Top = 85
+    Width = 200
+    Height = 23
+    DataField = 'nome'
+    DataSource = D_corretor
+    TabOrder = 3
+  end
+  object DBEdit2: TDBEdit
+    Left = 224
+    Top = 131
+    Width = 200
+    Height = 23
+    DataField = 'senha'
+    DataSource = D_corretor
+    TabOrder = 4
+  end
+  object DBEdit3: TDBEdit
+    Left = 224
+    Top = 181
+    Width = 200
+    Height = 23
+    DataField = 'cred'
+    DataSource = D_corretor
+    TabOrder = 5
+  end
   object Q_corretor: TFDQuery
-    Active = True
     CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (
       ' SELECT * FROM corretor;')
     Left = 24
     Top = 152
-    object Q_corretorsenha: TIntegerField
-      FieldName = 'senha'
-      Origin = 'senha'
-    end
-    object Q_corretorid: TIntegerField
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
     object Q_corretornome: TWideStringField
       FieldName = 'nome'
       Origin = 'nome'
       Size = 80
+    end
+    object Q_corretorsenha: TIntegerField
+      FieldName = 'senha'
+      Origin = 'senha'
+    end
+    object Q_corretorcred: TLargeintField
+      FieldName = 'cred'
+      Origin = 'cred'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
   end
   object Q_dados_corretor: TDataSource
@@ -151,11 +151,11 @@ object F_corretor: TF_corretor
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'SELECT * FROM corretor;')
-    Left = 96
-    Top = 216
-    object Q_dado_corretorid: TIntegerField
-      FieldName = 'id'
-      Origin = 'id'
+    Left = 104
+    Top = 192
+    object Q_dado_corretorcred: TLargeintField
+      FieldName = 'cred'
+      Origin = 'cred'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
     object Q_dado_corretornome: TWideStringField

@@ -14,15 +14,15 @@ uses
 type
   TF_login = class(TForm)
     B_logar: TButton;
-    T_cred: TEdit;
-    T_senha: TEdit;
     StaticText1: TStaticText;
     FDConnection1: TFDConnection;
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     Q_login: TFDQuery;
-    Q_loginid: TIntegerField;
+    Q_logincred: TLargeintField;
     Q_loginnome: TWideStringField;
     Q_loginsenha: TIntegerField;
+    T_cred: TEdit;
+    T_senha: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     procedure B_logarClick(Sender: TObject);
@@ -46,7 +46,7 @@ var
 
 begin
     Q_login.Close;
-    Q_login.ParamByName('id').AsInteger := StrToInt(T_cred.Text);
+    Q_login.ParamByName('cred').AsInteger := StrToInt(T_cred.Text);
     Q_login.Open;
 
 
