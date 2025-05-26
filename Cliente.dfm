@@ -13,16 +13,16 @@ object F_cliente: TF_cliente
   OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
-    Left = 184
-    Top = 78
+    Left = 208
+    Top = 88
     Width = 17
     Height = 15
     Caption = 'cpf'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 184
-    Top = 128
+    Left = 208
+    Top = 136
     Width = 31
     Height = 15
     Caption = 'nome'
@@ -53,7 +53,7 @@ object F_cliente: TF_cliente
     Columns = <
       item
         Expanded = False
-        FieldName = 'id'
+        FieldName = 'cpf'
         Visible = True
       end
       item
@@ -63,32 +63,32 @@ object F_cliente: TF_cliente
         Visible = True
       end>
   end
-  object DBEdit1: TDBEdit
-    Left = 184
-    Top = 99
-    Width = 177
-    Height = 23
-    DataField = 'id'
-    DataSource = D_cliente
-    TabOrder = 2
-  end
-  object DBEdit2: TDBEdit
-    Left = 184
-    Top = 149
-    Width = 177
-    Height = 23
-    DataField = 'nome'
-    DataSource = D_cliente
-    TabOrder = 3
-  end
   object Button2: TButton
-    Left = 216
+    Left = 248
     Top = 200
     Width = 113
     Height = 25
     Caption = 'cadastrar'
-    TabOrder = 4
+    TabOrder = 2
     OnClick = Button2Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 208
+    Top = 109
+    Width = 200
+    Height = 23
+    DataField = 'cpf'
+    DataSource = D_cliente
+    TabOrder = 3
+  end
+  object DBEdit2: TDBEdit
+    Left = 208
+    Top = 152
+    Width = 200
+    Height = 23
+    DataField = 'nome'
+    DataSource = D_cliente
+    TabOrder = 4
   end
   object Q_cliente: TFDQuery
     CachedUpdates = True
@@ -97,9 +97,9 @@ object F_cliente: TF_cliente
       'SELECT * FROM cliente;')
     Left = 32
     Top = 160
-    object Q_clienteid: TIntegerField
-      FieldName = 'id'
-      Origin = 'id'
+    object Q_clientecpf: TLargeintField
+      FieldName = 'cpf'
+      Origin = 'cpf'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
     object Q_clientenome: TWideStringField
@@ -115,18 +115,18 @@ object F_cliente: TF_cliente
   end
   object D_listar_cliente: TDataSource
     DataSet = Q_listar_cliente
-    Left = 440
-    Top = 224
+    Left = 488
+    Top = 248
   end
   object Q_listar_cliente: TFDQuery
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'SELECT * FROM cliente;')
-    Left = 432
-    Top = 144
-    object Q_listar_clienteid: TIntegerField
-      FieldName = 'id'
-      Origin = 'id'
+    Left = 464
+    Top = 72
+    object Q_listar_clientecpf: TLargeintField
+      FieldName = 'cpf'
+      Origin = 'cpf'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
     object Q_listar_clientenome: TWideStringField
