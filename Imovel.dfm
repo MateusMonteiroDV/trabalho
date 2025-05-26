@@ -13,27 +13,27 @@ object F_imovel: TF_imovel
   OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
-    Left = 192
-    Top = 168
-    Width = 21
+    Left = 240
+    Top = 80
+    Width = 37
     Height = 15
-    Caption = 'tipo'
+    Caption = 'codigo'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 192
-    Top = 104
+    Left = 240
+    Top = 128
     Width = 49
     Height = 15
     Caption = 'endereco'
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 192
-    Top = 56
-    Width = 37
+    Left = 240
+    Top = 176
+    Width = 21
     Height = 15
-    Caption = 'codigo'
+    Caption = 'tipo'
     FocusControl = DBEdit3
   end
   object B_voltar: TButton
@@ -67,6 +67,11 @@ object F_imovel: TF_imovel
       end
       item
         Expanded = False
+        FieldName = 'codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
         FieldName = 'endereco'
         Width = 200
         Visible = True
@@ -74,42 +79,43 @@ object F_imovel: TF_imovel
       item
         Expanded = False
         FieldName = 'tipo'
+        Width = 200
         Visible = True
       end>
   end
-  object DBEdit1: TDBEdit
-    Left = 192
-    Top = 184
-    Width = 200
-    Height = 23
-    DataField = 'tipo'
-    DataSource = D_imovel
-    TabOrder = 2
-  end
-  object DBEdit2: TDBEdit
-    Left = 192
-    Top = 133
-    Width = 200
-    Height = 23
-    DataField = 'endereco'
-    DataSource = D_imovel
-    TabOrder = 3
-  end
   object Button1: TButton
-    Left = 224
+    Left = 280
     Top = 240
     Width = 89
     Height = 25
     Caption = 'cadastrar'
-    TabOrder = 4
+    TabOrder = 2
     OnClick = Button1Click
   end
-  object DBEdit3: TDBEdit
-    Left = 192
-    Top = 77
+  object DBEdit1: TDBEdit
+    Left = 240
+    Top = 101
     Width = 200
     Height = 23
-    DataField = 'id'
+    DataField = 'codigo'
+    DataSource = D_imovel
+    TabOrder = 3
+  end
+  object DBEdit2: TDBEdit
+    Left = 240
+    Top = 144
+    Width = 200
+    Height = 23
+    DataField = 'endereco'
+    DataSource = D_imovel
+    TabOrder = 4
+  end
+  object DBEdit3: TDBEdit
+    Left = 240
+    Top = 192
+    Width = 200
+    Height = 23
+    DataField = 'tipo'
     DataSource = D_imovel
     TabOrder = 5
   end
@@ -124,15 +130,19 @@ object F_imovel: TF_imovel
       Origin = 'id'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
+    object Q_listar_imovelcodigo: TIntegerField
+      FieldName = 'codigo'
+      Origin = 'codigo'
+    end
     object Q_listar_imovelendereco: TWideStringField
       FieldName = 'endereco'
       Origin = 'endereco'
-      Size = 100
+      Size = 80
     end
     object Q_listar_imoveltipo: TWideStringField
       FieldName = 'tipo'
       Origin = 'tipo'
-      Size = 30
+      Size = 80
     end
   end
   object Q_imovel: TFDQuery
@@ -148,15 +158,19 @@ object F_imovel: TF_imovel
       Origin = 'id'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object Q_imoveltipo: TWideStringField
-      FieldName = 'tipo'
-      Origin = 'tipo'
-      Size = 30
+    object Q_imovelcodigo: TIntegerField
+      FieldName = 'codigo'
+      Origin = 'codigo'
     end
     object Q_imovelendereco: TWideStringField
       FieldName = 'endereco'
       Origin = 'endereco'
-      Size = 100
+      Size = 80
+    end
+    object Q_imoveltipo: TWideStringField
+      FieldName = 'tipo'
+      Origin = 'tipo'
+      Size = 80
     end
   end
   object D_imovel: TDataSource
