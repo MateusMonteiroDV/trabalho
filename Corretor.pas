@@ -8,16 +8,13 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls;
+  Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons;
 
 type
   TF_corretor = class(TForm)
     DBGrid1: TDBGrid;
     Q_corretor: TFDQuery;
-    Q_dados_corretor: TDataSource;
     D_corretor: TDataSource;
-    B_corretor: TButton;
-    Q_dado_corretor: TFDQuery;
     B_voltar: TButton;
     Q_corretorcred: TLargeintField;
     Q_corretornome: TWideStringField;
@@ -28,11 +25,8 @@ type
     DBEdit2: TDBEdit;
     Label3: TLabel;
     DBEdit3: TDBEdit;
-    Q_dado_corretorcred: TLargeintField;
-    Q_dado_corretornome: TWideStringField;
-    Q_dado_corretorsenha: TIntegerField;
-    procedure FormShow(Sender: TObject);
-    procedure B_corretorClick(Sender: TObject);
+    DBNavigator1: TDBNavigator;
+
     procedure B_voltarClick(Sender: TObject);
   private
     { Private declarations }
@@ -47,35 +41,6 @@ implementation
 uses Login,Menu;
 {$R *.dfm}
 
-procedure TF_corretor.B_corretorClick(Sender: TObject);
-begin
-    try
-      Q_corretor.Post;
-      Q_corretor.ApplyUpdates(0);
-
-      Q_dado_corretor.Close;
-      Q_dado_corretor.Open;
-
-
-
-      Q_corretor.Close;
-      Q_corretor.Open;
-
-      Q_corretor.Append;
-
-
-
-    except
-      on E:Exception do
-        begin
-          ShowMessage('Erro'+ E.Message);
-          Q_corretor.Cancel;
-        end;
-
-    end;
-
-
-end;
 
 procedure TF_corretor.B_voltarClick(Sender: TObject);
 var
@@ -86,17 +51,6 @@ begin
     menu := TF_Menu.Create(nil);
     menu.ShowModal;
     menu.Free;
-end;
-
-procedure TF_corretor.FormShow(Sender: TObject);
-begin
-
-
-         Q_dado_corretor.Open;
-
-         Q_corretor.Close;
-         Q_corretor.Open;
-         Q_corretor.Append;
 end;
 
 end.

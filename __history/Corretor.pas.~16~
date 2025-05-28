@@ -15,23 +15,25 @@ type
     DBGrid1: TDBGrid;
     Q_corretor: TFDQuery;
     Q_dados_corretor: TDataSource;
-    Q_corretorid: TIntegerField;
+    D_corretor: TDataSource;
+    B_corretor: TButton;
+    Q_dado_corretor: TFDQuery;
+    B_voltar: TButton;
+    Q_corretorcred: TLargeintField;
     Q_corretornome: TWideStringField;
     Q_corretorsenha: TIntegerField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
-    D_corretor: TDataSource;
     Label2: TLabel;
     DBEdit2: TDBEdit;
     Label3: TLabel;
     DBEdit3: TDBEdit;
-    B_corretor: TButton;
-    Q_dado_corretor: TFDQuery;
-    Q_dado_corretorid: TIntegerField;
+    Q_dado_corretorcred: TLargeintField;
     Q_dado_corretornome: TWideStringField;
     Q_dado_corretorsenha: TIntegerField;
     procedure FormShow(Sender: TObject);
     procedure B_corretorClick(Sender: TObject);
+    procedure B_voltarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,7 +56,15 @@ begin
       Q_dado_corretor.Close;
       Q_dado_corretor.Open;
 
+
+
+      Q_corretor.Close;
+      Q_corretor.Open;
+
       Q_corretor.Append;
+
+
+
     except
       on E:Exception do
         begin
@@ -67,11 +77,25 @@ begin
 
 end;
 
+procedure TF_corretor.B_voltarClick(Sender: TObject);
+var
+menu : TF_Menu;
+
+begin
+    Self.Hide;
+    menu := TF_Menu.Create(nil);
+    menu.ShowModal;
+    menu.Free;
+end;
+
 procedure TF_corretor.FormShow(Sender: TObject);
 begin
 
-         Q_dado_corretor.Close;
+
          Q_dado_corretor.Open;
+
+         Q_corretor.Close;
+         Q_corretor.Open;
          Q_corretor.Append;
 end;
 

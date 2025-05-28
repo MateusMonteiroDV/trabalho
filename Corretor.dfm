@@ -10,27 +10,26 @@ object F_corretor: TF_corretor
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OnShow = FormShow
   TextHeight = 15
   object Label1: TLabel
-    Left = 224
-    Top = 64
+    Left = 208
+    Top = 112
     Width = 31
     Height = 15
     Caption = 'nome'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 224
-    Top = 110
+    Left = 208
+    Top = 158
     Width = 31
     Height = 15
     Caption = 'senha'
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 224
-    Top = 160
+    Left = 208
+    Top = 208
     Width = 23
     Height = 15
     Caption = 'cred'
@@ -42,7 +41,8 @@ object F_corretor: TF_corretor
     Width = 624
     Height = 145
     Align = alBottom
-    DataSource = Q_dados_corretor
+    DataSource = D_corretor
+    ReadOnly = True
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -69,52 +69,56 @@ object F_corretor: TF_corretor
         Visible = True
       end>
   end
-  object B_corretor: TButton
-    Left = 248
-    Top = 232
-    Width = 154
-    Height = 25
-    Caption = 'B_corretor'
-    TabOrder = 1
-    OnClick = B_corretorClick
-  end
   object B_voltar: TButton
-    Left = 8
-    Top = 16
+    Left = 0
+    Top = 54
     Width = 97
     Height = 25
     Caption = 'voltar'
-    TabOrder = 2
+    TabOrder = 1
     OnClick = B_voltarClick
   end
   object DBEdit1: TDBEdit
-    Left = 224
-    Top = 85
+    Left = 208
+    Top = 133
     Width = 200
     Height = 23
     DataField = 'nome'
     DataSource = D_corretor
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBEdit2: TDBEdit
-    Left = 224
-    Top = 131
+    Left = 208
+    Top = 179
     Width = 200
     Height = 23
     DataField = 'senha'
     DataSource = D_corretor
-    TabOrder = 4
+    TabOrder = 3
   end
   object DBEdit3: TDBEdit
-    Left = 224
-    Top = 181
+    Left = 208
+    Top = 229
     Width = 200
     Height = 23
     DataField = 'cred'
     DataSource = D_corretor
+    TabOrder = 4
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 624
+    Height = 25
+    DataSource = D_corretor
+    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbRefresh]
+    Align = alTop
     TabOrder = 5
+    ExplicitLeft = -16
+    ExplicitTop = 8
   end
   object Q_corretor: TFDQuery
+    Active = True
     CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (
@@ -136,36 +140,9 @@ object F_corretor: TF_corretor
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
   end
-  object Q_dados_corretor: TDataSource
-    DataSet = Q_dado_corretor
-    Left = 40
-    Top = 56
-  end
   object D_corretor: TDataSource
     DataSet = Q_corretor
     Left = 32
     Top = 232
-  end
-  object Q_dado_corretor: TFDQuery
-    CachedUpdates = True
-    Connection = F_login.FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM corretor;')
-    Left = 104
-    Top = 192
-    object Q_dado_corretorcred: TLargeintField
-      FieldName = 'cred'
-      Origin = 'cred'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
-    object Q_dado_corretornome: TWideStringField
-      FieldName = 'nome'
-      Origin = 'nome'
-      Size = 80
-    end
-    object Q_dado_corretorsenha: TIntegerField
-      FieldName = 'senha'
-      Origin = 'senha'
-    end
   end
 end
