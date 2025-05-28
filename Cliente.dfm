@@ -10,11 +10,10 @@ object F_cliente: TF_cliente
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
     Left = 208
-    Top = 88
+    Top = 136
     Width = 17
     Height = 15
     Caption = 'cpf'
@@ -22,15 +21,15 @@ object F_cliente: TF_cliente
   end
   object Label2: TLabel
     Left = 208
-    Top = 136
+    Top = 184
     Width = 31
     Height = 15
     Caption = 'nome'
     FocusControl = DBEdit2
   end
   object Button1: TButton
-    Left = 56
-    Top = 40
+    Left = 32
+    Top = 60
     Width = 75
     Height = 25
     Caption = 'voltar'
@@ -43,7 +42,7 @@ object F_cliente: TF_cliente
     Width = 624
     Height = 120
     Align = alBottom
-    DataSource = D_listar_cliente
+    DataSource = D_cliente
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -63,34 +62,39 @@ object F_cliente: TF_cliente
         Visible = True
       end>
   end
-  object Button2: TButton
-    Left = 248
-    Top = 200
-    Width = 113
-    Height = 25
-    Caption = 'cadastrar'
-    TabOrder = 2
-    OnClick = Button2Click
-  end
   object DBEdit1: TDBEdit
     Left = 208
-    Top = 109
+    Top = 157
     Width = 200
     Height = 23
     DataField = 'cpf'
     DataSource = D_cliente
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBEdit2: TDBEdit
     Left = 208
-    Top = 152
+    Top = 200
     Width = 200
     Height = 23
     DataField = 'nome'
     DataSource = D_cliente
+    TabOrder = 3
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 624
+    Height = 25
+    DataSource = D_cliente
+    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+    Align = alTop
     TabOrder = 4
+    ExplicitLeft = 232
+    ExplicitTop = 56
+    ExplicitWidth = 240
   end
   object Q_cliente: TFDQuery
+    Active = True
     CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (
@@ -112,27 +116,5 @@ object F_cliente: TF_cliente
     DataSet = Q_cliente
     Left = 32
     Top = 224
-  end
-  object D_listar_cliente: TDataSource
-    DataSet = Q_listar_cliente
-    Left = 488
-    Top = 248
-  end
-  object Q_listar_cliente: TFDQuery
-    Connection = F_login.FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM cliente;')
-    Left = 464
-    Top = 72
-    object Q_listar_clientecpf: TLargeintField
-      FieldName = 'cpf'
-      Origin = 'cpf'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
-    object Q_listar_clientenome: TWideStringField
-      FieldName = 'nome'
-      Origin = 'nome'
-      Size = 80
-    end
   end
 end

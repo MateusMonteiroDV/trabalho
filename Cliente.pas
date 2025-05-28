@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons;
 
 type
   TF_cliente = class(TForm)
@@ -16,20 +16,15 @@ type
     DBGrid1: TDBGrid;
     Q_cliente: TFDQuery;
     D_cliente: TDataSource;
-    Button2: TButton;
-    D_listar_cliente: TDataSource;
-    Q_listar_cliente: TFDQuery;
     Q_clientecpf: TLargeintField;
     Q_clientenome: TWideStringField;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
     DBEdit2: TDBEdit;
-    Q_listar_clientecpf: TLargeintField;
-    Q_listar_clientenome: TWideStringField;
+    DBNavigator1: TDBNavigator;
     procedure Button1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -55,29 +50,5 @@ begin
      menu.Free;
 end;
 
-procedure TF_cliente.Button2Click(Sender: TObject);
-begin
-      Q_cliente.Post;
-      Q_cliente.ApplyUpdates(0);
-
-      Q_cliente.Close;
-      Q_cliente.Open;
-
-      Q_listar_cliente.Close;
-      Q_listar_cliente.Open;
-
-      Q_cliente.Append;
-
-end;
-
-procedure TF_cliente.FormCreate(Sender: TObject);
-begin
-
-    Q_listar_cliente.Open;
-    Q_cliente.Close;
-    Q_cliente.Open;
-    Q_cliente.Append;
-
-end;
 
 end.

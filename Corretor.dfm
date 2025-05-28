@@ -111,7 +111,7 @@ object F_corretor: TF_corretor
     Width = 624
     Height = 25
     DataSource = D_corretor
-    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbRefresh]
+    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbRefresh, nbCancelUpdates]
     Align = alTop
     TabOrder = 5
     ExplicitLeft = -16
