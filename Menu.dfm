@@ -54,6 +54,7 @@ object F_Menu: TF_Menu
       Height = 25
       Caption = 'Proposta de compra'
       TabOrder = 3
+      OnClick = Button4Click
     end
     object Button5: TButton
       Left = 176

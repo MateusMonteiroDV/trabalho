@@ -10,27 +10,26 @@ object F_imovel: TF_imovel
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
-    Left = 240
-    Top = 80
+    Left = 208
+    Top = 128
     Width = 37
     Height = 15
     Caption = 'codigo'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 240
-    Top = 128
+    Left = 208
+    Top = 176
     Width = 49
     Height = 15
     Caption = 'endereco'
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 240
-    Top = 176
+    Left = 208
+    Top = 224
     Width = 21
     Height = 15
     Caption = 'tipo'
@@ -38,7 +37,7 @@ object F_imovel: TF_imovel
   end
   object B_voltar: TButton
     Left = 24
-    Top = 32
+    Top = 72
     Width = 105
     Height = 25
     Caption = 'voltar'
@@ -51,7 +50,7 @@ object F_imovel: TF_imovel
     Width = 624
     Height = 120
     Align = alBottom
-    DataSource = D_listar_imovel
+    DataSource = D_imovel
     ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -83,67 +82,45 @@ object F_imovel: TF_imovel
         Visible = True
       end>
   end
-  object Button1: TButton
-    Left = 280
-    Top = 240
-    Width = 89
-    Height = 25
-    Caption = 'cadastrar'
-    TabOrder = 2
-    OnClick = Button1Click
-  end
   object DBEdit1: TDBEdit
-    Left = 240
-    Top = 101
+    Left = 208
+    Top = 149
     Width = 200
     Height = 23
     DataField = 'codigo'
     DataSource = D_imovel
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBEdit2: TDBEdit
-    Left = 240
-    Top = 144
+    Left = 208
+    Top = 192
     Width = 200
     Height = 23
     DataField = 'endereco'
     DataSource = D_imovel
-    TabOrder = 4
+    TabOrder = 3
   end
   object DBEdit3: TDBEdit
-    Left = 240
-    Top = 192
+    Left = 208
+    Top = 240
     Width = 200
     Height = 23
     DataField = 'tipo'
     DataSource = D_imovel
-    TabOrder = 5
+    TabOrder = 4
   end
-  object Q_listar_imovel: TFDQuery
-    Connection = F_login.FDConnection1
-    SQL.Strings = (
-      'SELECT * FROM imovel;')
-    Left = 40
-    Top = 256
-    object Q_listar_imovelid: TIntegerField
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
-    object Q_listar_imovelcodigo: TIntegerField
-      FieldName = 'codigo'
-      Origin = 'codigo'
-    end
-    object Q_listar_imovelendereco: TWideStringField
-      FieldName = 'endereco'
-      Origin = 'endereco'
-      Size = 80
-    end
-    object Q_listar_imoveltipo: TWideStringField
-      FieldName = 'tipo'
-      Origin = 'tipo'
-      Size = 80
-    end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 624
+    Height = 25
+    DataSource = D_imovel
+    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+    Align = alTop
+    TabOrder = 5
+    ExplicitLeft = 248
+    ExplicitTop = 40
+    ExplicitWidth = 240
   end
   object Q_imovel: TFDQuery
     Active = True
@@ -151,8 +128,8 @@ object F_imovel: TF_imovel
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'SELECT * FROM imovel;')
-    Left = 64
-    Top = 160
+    Left = 48
+    Top = 240
     object Q_imovelid: TIntegerField
       FieldName = 'id'
       Origin = 'id'
@@ -175,12 +152,7 @@ object F_imovel: TF_imovel
   end
   object D_imovel: TDataSource
     DataSet = Q_imovel
-    Left = 56
-    Top = 96
-  end
-  object D_listar_imovel: TDataSource
-    DataSet = Q_listar_imovel
-    Left = 488
-    Top = 24
+    Left = 48
+    Top = 184
   end
 end

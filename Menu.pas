@@ -17,6 +17,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,7 +28,7 @@ var
   F_Menu: TF_Menu;
 
 implementation
- uses Corretor, Imovel, Cliente;
+ uses Corretor, Imovel, Cliente, Proposta_compra;
 {$R *.dfm}
 
 procedure TF_Menu.Button1Click(Sender: TObject);
@@ -66,6 +67,15 @@ begin
     cliente.free;
 
 
+end;
+
+procedure TF_Menu.Button4Click(Sender: TObject);
+
+
+begin
+    F_proposta := TF_proposta.Create(nil);
+    F_proposta.ShowModal;
+    F_proposta.Free;
 end;
 
 end.

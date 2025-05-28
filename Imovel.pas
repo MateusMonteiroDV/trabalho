@@ -8,17 +8,14 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons;
 
 type
   TF_imovel = class(TForm)
     B_voltar: TButton;
     DBGrid1: TDBGrid;
-    Q_listar_imovel: TFDQuery;
     Q_imovel: TFDQuery;
     D_imovel: TDataSource;
-    Button1: TButton;
-    D_listar_imovel: TDataSource;
     Q_imovelid: TIntegerField;
     Q_imovelcodigo: TIntegerField;
     Q_imovelendereco: TWideStringField;
@@ -29,13 +26,9 @@ type
     DBEdit2: TDBEdit;
     Label3: TLabel;
     DBEdit3: TDBEdit;
-    Q_listar_imovelid: TIntegerField;
-    Q_listar_imovelcodigo: TIntegerField;
-    Q_listar_imovelendereco: TWideStringField;
-    Q_listar_imoveltipo: TWideStringField;
+    DBNavigator1: TDBNavigator;
     procedure B_voltarClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -49,20 +42,7 @@ implementation
 uses Login, Menu;
 {$R *.dfm}
 
-procedure TF_imovel.Button1Click(Sender: TObject);
-begin
-    Q_imovel.Post;
-    Q_imovel.ApplyUpdates(0);
 
-    Q_imovel.Close;
-    Q_imovel.Open;
-
-    Q_listar_imovel.Close;
-    Q_listar_imovel.Open;
-
-    Q_imovel.Append;
-
-end;
 
 procedure TF_imovel.B_voltarClick(Sender: TObject);
 var
@@ -75,16 +55,6 @@ begin
   menu.ShowModal;
   menu.Free;
 
-
-end;
-
-procedure TF_imovel.FormCreate(Sender: TObject);
-begin
-    Q_listar_imovel.Open;
-
-    Q_imovel.Close;
-    Q_imovel.Open;
-    Q_imovel.Append;
 
 end;
 

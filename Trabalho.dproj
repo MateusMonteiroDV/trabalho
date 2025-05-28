@@ -113,6 +113,10 @@
             <Form>F_cliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Proposta_compra.pas">
+            <Form>F_proposta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
