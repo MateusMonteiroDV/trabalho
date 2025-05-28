@@ -12,24 +12,24 @@ object F_proposta: TF_proposta
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 192
-    Top = 88
-    Width = 29
+    Left = 152
+    Top = 96
+    Width = 57
     Height = 15
-    Caption = 'CRED'
+    Caption = 'id_corretor'
     FocusControl = DBEdit1
   end
   object Label3: TLabel
-    Left = 192
-    Top = 184
-    Width = 21
+    Left = 152
+    Top = 192
+    Width = 50
     Height = 15
-    Caption = 'CPF'
+    Caption = 'id_cliente'
     FocusControl = DBEdit3
   end
   object Label4: TLabel
-    Left = 192
-    Top = 232
+    Left = 152
+    Top = 240
     Width = 76
     Height = 15
     Caption = 'valor_ofertado'
@@ -42,13 +42,6 @@ object F_proposta: TF_proposta
     Height = 15
     Caption = 'valor_comissao'
     FocusControl = DBEdit5
-  end
-  object Label2: TLabel
-    Left = 192
-    Top = 136
-    Width = 36
-    Height = 15
-    Caption = 'Imovel'
   end
   object DBNavigator1: TDBNavigator
     Left = 0
@@ -64,8 +57,8 @@ object F_proposta: TF_proposta
     ExplicitWidth = 240
   end
   object DBEdit1: TDBEdit
-    Left = 192
-    Top = 104
+    Left = 152
+    Top = 112
     Width = 229
     Height = 23
     DataField = 'id_corretor'
@@ -73,8 +66,8 @@ object F_proposta: TF_proposta
     TabOrder = 1
   end
   object DBEdit3: TDBEdit
-    Left = 192
-    Top = 200
+    Left = 152
+    Top = 208
     Width = 229
     Height = 23
     DataField = 'id_cliente'
@@ -82,8 +75,8 @@ object F_proposta: TF_proposta
     TabOrder = 2
   end
   object DBEdit4: TDBEdit
-    Left = 192
-    Top = 251
+    Left = 152
+    Top = 259
     Width = 229
     Height = 23
     DataField = 'valor_ofertado'
@@ -100,8 +93,8 @@ object F_proposta: TF_proposta
     TabOrder = 4
   end
   object B_imovel: TDBLookupComboBox
-    Left = 192
-    Top = 155
+    Left = 152
+    Top = 163
     Width = 229
     Height = 23
     DataField = 'id_imovel'
@@ -153,7 +146,6 @@ object F_proposta: TF_proposta
   end
   object Q_proposta: TFDQuery
     Active = True
-    AfterPost = Q_propostaAfterPost
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'select * from proposta_compra;')
@@ -191,16 +183,16 @@ object F_proposta: TF_proposta
   end
   object D_imovel: TDataSource
     DataSet = Q_imovel
-    Left = 520
-    Top = 184
+    Left = 464
+    Top = 168
   end
   object Q_imovel: TFDQuery
     Active = True
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'select * from imovel;')
-    Left = 520
-    Top = 96
+    Left = 464
+    Top = 88
     object Q_imovelid: TIntegerField
       FieldName = 'id'
       Origin = 'id'

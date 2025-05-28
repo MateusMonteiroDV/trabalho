@@ -36,8 +36,6 @@ type
     Q_imovelcodigo: TIntegerField;
     Q_imovelendereco: TWideStringField;
     Q_imoveltipo: TWideStringField;
-    Label2: TLabel;
-    procedure Q_propostaAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -50,10 +48,5 @@ var
 implementation
 uses Login, Menu;
 {$R *.dfm}
-
-procedure TF_proposta.Q_propostaAfterPost(DataSet: TDataSet);
-begin
-  DataSet.Refresh;
-end;
 
 end.
