@@ -37,13 +37,6 @@ type
     Q_imovelendereco: TWideStringField;
     Q_imoveltipo: TWideStringField;
     Label2: TLabel;
-    Q_listar_proposta: TFDQuery;
-    D_listar_proposta: TDataSource;
-    Q_listar_propostacorretor: TWideStringField;
-    Q_listar_propostaendereco: TWideStringField;
-    Q_listar_propostacodigo: TIntegerField;
-    Q_listar_propostacliente: TWideStringField;
-    Q_listar_propostacomissao: TBCDField;
     procedure Q_propostaAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
@@ -60,8 +53,6 @@ uses Login, Menu;
 
 procedure TF_proposta.Q_propostaAfterPost(DataSet: TDataSet);
 begin
-
-  Q_listar_proposta.Refresh;
   DataSet.Refresh;
 end;
 

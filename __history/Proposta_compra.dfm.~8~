@@ -125,8 +125,8 @@ object F_proposta: TF_proposta
     Columns = <
       item
         Expanded = False
-        FieldName = 'corretor'
-        Width = 150
+        FieldName = 'nome'
+        Width = 100
         Visible = True
       end
       item
@@ -142,12 +142,11 @@ object F_proposta: TF_proposta
       end
       item
         Expanded = False
-        FieldName = 'cliente'
-        Width = 150
+        FieldName = 'nome_1'
+        Width = 200
         Visible = True
       end
       item
-        Alignment = taLeftJustify
         Expanded = False
         FieldName = 'comissao'
         Visible = True
@@ -228,17 +227,17 @@ object F_proposta: TF_proposta
     Connection = F_login.FDConnection1
     SQL.Strings = (
       
-        'select c.nome as corretor, im.endereco, im.codigo, cl.nome as cl' +
-        'iente, p.valor_comissao as comissao'
+        'select c.nome, im.endereco, im.codigo, cl.nome, p.valor_comissao' +
+        ' as comissao'
       'from proposta_compra p '
       'join corretor c on p.id_corretor = c.cred'
       'join cliente cl on p.id_cliente = cl.cpf'
       'join imovel im on p.id_corretor = im.id;')
-    Left = 496
+    Left = 464
     Top = 200
-    object Q_listar_propostacorretor: TWideStringField
-      FieldName = 'corretor'
-      Origin = 'corretor'
+    object Q_listar_propostanome: TWideStringField
+      FieldName = 'nome'
+      Origin = 'nome'
       Size = 80
     end
     object Q_listar_propostaendereco: TWideStringField
@@ -252,10 +251,10 @@ object F_proposta: TF_proposta
       FieldName = 'codigo'
       Origin = 'codigo'
     end
-    object Q_listar_propostacliente: TWideStringField
+    object Q_listar_propostanome_1: TWideStringField
       AutoGenerateValue = arDefault
-      FieldName = 'cliente'
-      Origin = 'cliente'
+      FieldName = 'nome_1'
+      Origin = 'nome'
       Size = 80
     end
     object Q_listar_propostacomissao: TBCDField
@@ -268,7 +267,7 @@ object F_proposta: TF_proposta
   end
   object D_listar_proposta: TDataSource
     DataSet = Q_listar_proposta
-    Left = 496
+    Left = 440
     Top = 264
   end
 end
