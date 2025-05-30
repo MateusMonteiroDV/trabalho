@@ -12,13 +12,16 @@
     <Transaction>2025/05/24 15:38:12.000.179,C:\Users\mateu\Desktop\trabalho\Unit1.pas=C:\Users\mateu\Desktop\trabalho\Corretor.pas</Transaction>
     <Transaction>2025/05/24 15:38:12.000.179,C:\Users\mateu\Desktop\trabalho\Unit1.dfm=C:\Users\mateu\Desktop\trabalho\Corretor.dfm</Transaction>
     <Transaction>2025/05/25 17:19:54.000.407,=C:\Users\mateu\Desktop\trabalho\Unit1.pas</Transaction>
-    <Transaction>2025/05/25 17:20:05.000.282,C:\Users\mateu\Desktop\trabalho\Imovel.dfm=C:\Users\mateu\Desktop\trabalho\Unit1.dfm</Transaction>
     <Transaction>2025/05/25 17:20:05.000.282,C:\Users\mateu\Desktop\trabalho\Imovel.pas=C:\Users\mateu\Desktop\trabalho\Unit1.pas</Transaction>
+    <Transaction>2025/05/25 17:20:05.000.282,C:\Users\mateu\Desktop\trabalho\Imovel.dfm=C:\Users\mateu\Desktop\trabalho\Unit1.dfm</Transaction>
     <Transaction>2025/05/25 18:14:12.000.792,=C:\Users\mateu\Desktop\trabalho\Unit1.pas</Transaction>
     <Transaction>2025/05/25 18:14:20.000.824,C:\Users\mateu\Desktop\trabalho\Unit1.pas=C:\Users\mateu\Desktop\trabalho\Cliente.pas</Transaction>
     <Transaction>2025/05/25 18:14:20.000.824,C:\Users\mateu\Desktop\trabalho\Unit1.dfm=C:\Users\mateu\Desktop\trabalho\Cliente.dfm</Transaction>
     <Transaction>2025/05/28 09:52:20.000.206,=C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.pas</Transaction>
-    <Transaction>2025/05/28 09:52:38.000.769,C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.dfm=C:\Users\mateu\OneDrive\Desktop\trabalho\Proposta_compra.dfm</Transaction>
     <Transaction>2025/05/28 09:52:38.000.769,C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.pas=C:\Users\mateu\OneDrive\Desktop\trabalho\Proposta_compra.pas</Transaction>
+    <Transaction>2025/05/28 09:52:38.000.769,C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.dfm=C:\Users\mateu\OneDrive\Desktop\trabalho\Proposta_compra.dfm</Transaction>
+    <Transaction>2025/05/30 09:46:49.287,=C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.pas</Transaction>
+    <Transaction>2025/05/30 09:58:23.974,C:\Users\mateu\OneDrive\Desktop\trabalho\Total_comissao_corretor.pas=C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.pas</Transaction>
+    <Transaction>2025/05/30 09:58:23.974,C:\Users\mateu\OneDrive\Desktop\trabalho\Total_comissao_corretor.dfm=C:\Users\mateu\OneDrive\Desktop\trabalho\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

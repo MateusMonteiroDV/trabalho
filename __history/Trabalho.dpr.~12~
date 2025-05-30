@@ -7,8 +7,7 @@ uses
   Corretor in 'Corretor.pas' {F_corretor},
   Imovel in 'Imovel.pas' {F_imovel},
   Cliente in 'Cliente.pas' {F_cliente},
-  Proposta_compra in 'Proposta_compra.pas' {F_proposta},
-  Total_comissao_corretor in 'Total_comissao_corretor.pas' {F_comissao};
+  Proposta_compra in 'Proposta_compra.pas' {F_proposta};
 
 {$R *.res}
 
@@ -17,6 +16,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TF_login, F_login);
   Application.CreateForm(TF_proposta, F_proposta);
-  Application.CreateForm(TF_comissao, F_comissao);
   Application.Run;
 end.

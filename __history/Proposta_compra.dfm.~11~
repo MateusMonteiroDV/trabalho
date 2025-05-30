@@ -99,7 +99,7 @@ object F_proposta: TF_proposta
   end
   object B_imovel: TDBLookupComboBox
     Left = 192
-    Top = 133
+    Top = 131
     Width = 229
     Height = 23
     DataField = 'id_imovel'
