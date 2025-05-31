@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.VCLUI.Wait, FireDAC.Phys.PGDef, FireDAC.Stan.Param, FireDAC.DatS,
   FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, FireDAC.Phys.PG;
+  FireDAC.Comp.Client, FireDAC.Phys.PG, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
   TF_login = class(TForm)
@@ -25,6 +25,9 @@ type
     T_senha: TEdit;
     Label1: TLabel;
     Label2: TLabel;
+    Image1: TImage;
+    Label3: TLabel;
+    Label4: TLabel;
     procedure B_logarClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
