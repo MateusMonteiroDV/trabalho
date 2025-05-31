@@ -27,15 +27,6 @@ object F_cliente: TF_cliente
     Caption = 'nome'
     FocusControl = DBEdit2
   end
-  object Button1: TButton
-    Left = 32
-    Top = 60
-    Width = 75
-    Height = 25
-    Caption = 'voltar'
-    TabOrder = 0
-    OnClick = Button1Click
-  end
   object DBGrid1: TDBGrid
     Left = 0
     Top = 321
@@ -43,7 +34,7 @@ object F_cliente: TF_cliente
     Height = 120
     Align = alBottom
     DataSource = D_cliente
-    TabOrder = 1
+    TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -69,7 +60,7 @@ object F_cliente: TF_cliente
     Height = 23
     DataField = 'cpf'
     DataSource = D_cliente
-    TabOrder = 2
+    TabOrder = 1
   end
   object DBEdit2: TDBEdit
     Left = 208
@@ -78,7 +69,7 @@ object F_cliente: TF_cliente
     Height = 23
     DataField = 'nome'
     DataSource = D_cliente
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBNavigator1: TDBNavigator
     Left = 0
@@ -88,10 +79,8 @@ object F_cliente: TF_cliente
     DataSource = D_cliente
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
     Align = alTop
-    TabOrder = 4
-    ExplicitLeft = 232
-    ExplicitTop = 56
-    ExplicitWidth = 240
+    TabOrder = 3
+    ExplicitWidth = 622
   end
   object Q_cliente: TFDQuery
     Active = True

@@ -12,37 +12,28 @@ object F_imovel: TF_imovel
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 208
-    Top = 128
+    Left = 256
+    Top = 104
     Width = 37
     Height = 15
     Caption = 'codigo'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 208
-    Top = 176
+    Left = 256
+    Top = 152
     Width = 49
     Height = 15
     Caption = 'endereco'
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 208
-    Top = 224
+    Left = 256
+    Top = 200
     Width = 21
     Height = 15
     Caption = 'tipo'
     FocusControl = DBEdit3
-  end
-  object B_voltar: TButton
-    Left = 24
-    Top = 72
-    Width = 105
-    Height = 25
-    Caption = 'voltar'
-    TabOrder = 0
-    OnClick = B_voltarClick
   end
   object DBGrid1: TDBGrid
     Left = 0
@@ -52,7 +43,7 @@ object F_imovel: TF_imovel
     Align = alBottom
     DataSource = D_imovel
     ReadOnly = True
-    TabOrder = 1
+    TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -83,31 +74,31 @@ object F_imovel: TF_imovel
       end>
   end
   object DBEdit1: TDBEdit
-    Left = 208
-    Top = 149
+    Left = 256
+    Top = 125
     Width = 200
     Height = 23
     DataField = 'codigo'
     DataSource = D_imovel
-    TabOrder = 2
+    TabOrder = 1
   end
   object DBEdit2: TDBEdit
-    Left = 208
-    Top = 192
+    Left = 256
+    Top = 168
     Width = 200
     Height = 23
     DataField = 'endereco'
     DataSource = D_imovel
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBEdit3: TDBEdit
-    Left = 208
-    Top = 240
+    Left = 256
+    Top = 216
     Width = 200
     Height = 23
     DataField = 'tipo'
     DataSource = D_imovel
-    TabOrder = 4
+    TabOrder = 3
   end
   object DBNavigator1: TDBNavigator
     Left = 0
@@ -117,10 +108,8 @@ object F_imovel: TF_imovel
     DataSource = D_imovel
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
     Align = alTop
-    TabOrder = 5
-    ExplicitLeft = 248
-    ExplicitTop = 40
-    ExplicitWidth = 240
+    TabOrder = 4
+    ExplicitWidth = 622
   end
   object Q_imovel: TFDQuery
     Active = True

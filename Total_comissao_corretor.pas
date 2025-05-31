@@ -18,7 +18,7 @@ type
     Q_comissaonome: TWideStringField;
     Q_comissaototal_comissao: TFMTBCDField;
     G_comissao: TDBGrid;
-    procedure Label2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -31,12 +31,5 @@ var
 implementation
 uses Login, Menu;
 {$R *.dfm}
-
-procedure TF_comissao.Label2Click(Sender: TObject);
-begin
-
-    G_comissao.SendToBack;
-    label2.BringToFront;
-end;
 
 end.

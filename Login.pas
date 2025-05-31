@@ -41,8 +41,8 @@ uses Menu, Imovel,Corretor, Cliente;
 {$R *.dfm}
 
 procedure TF_login.B_logarClick(Sender: TObject);
-var
-  menu: TF_Menu;
+
+
 
 begin
     Q_login.Close;
@@ -55,9 +55,9 @@ begin
     if Q_login.FieldByName('senha').AsInteger = StrToInt(T_senha.Text) then
         begin
              Self.Hide;
-             menu := TF_Menu.Create(nil);
-             menu.ShowModal;
-             menu.Free;
+             F_menu := TF_Menu.Create(nil);
+             F_menu.Show;
+
         end
 
        else

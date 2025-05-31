@@ -2,8 +2,8 @@ object F_Menu: TF_Menu
   Left = 0
   Top = 0
   Caption = 'F_Menu'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 460
+  ClientWidth = 701
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,55 +14,65 @@ object F_Menu: TF_Menu
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 624
-    Height = 441
-    Align = alClient
+    Width = 701
+    Height = 33
+    Align = alTop
     TabOrder = 0
-    ExplicitWidth = 622
-    ExplicitHeight = 433
-    object Button1: TButton
-      Left = 234
-      Top = 120
+    ExplicitWidth = 782
+    object SpeedButton1: TSpeedButton
+      AlignWithMargins = True
+      Left = 24
+      Top = 3
       Width = 113
-      Height = 25
-      Caption = 'Cadatrar corretor'
-      TabOrder = 0
-      OnClick = Button1Click
-    end
-    object Button2: TButton
-      Left = 234
-      Top = 175
-      Width = 113
-      Height = 25
-      Caption = 'Cadastrar imovel'
-      TabOrder = 1
-      OnClick = Button2Click
-    end
-    object Button3: TButton
-      Left = 234
-      Top = 233
-      Width = 113
-      Height = 25
+      Height = 30
       Caption = 'Cadastrar cliente'
-      TabOrder = 2
-      OnClick = Button3Click
+      Flat = True
+      OnClick = SpeedButton1Click
     end
-    object Button4: TButton
-      Left = 234
-      Top = 288
-      Width = 131
-      Height = 25
-      Caption = 'Proposta de compra'
-      TabOrder = 3
-      OnClick = Button4Click
+    object SpeedButton2: TSpeedButton
+      Left = 143
+      Top = 3
+      Width = 113
+      Height = 30
+      Caption = 'Cadastrar  corretor'
+      Flat = True
+      OnClick = SpeedButton2Click
     end
-    object Button5: TButton
-      Left = 176
-      Top = 353
-      Width = 235
-      Height = 25
-      Caption = 'Total de comisas'#227'o de cada corretor'
-      TabOrder = 4
+    object SpeedButton3: TSpeedButton
+      Left = 262
+      Top = 3
+      Width = 105
+      Height = 30
+      Caption = 'Cadastrar  imovel'
+      Flat = True
+      OnClick = SpeedButton3Click
     end
+    object SpeedButton5: TSpeedButton
+      Left = 373
+      Top = 3
+      Width = 170
+      Height = 30
+      Caption = 'Cadastrar  proposta de compra'
+      Flat = True
+      OnClick = SpeedButton5Click
+    end
+    object SpeedButton6: TSpeedButton
+      Left = 549
+      Top = 3
+      Width = 108
+      Height = 30
+      Caption = 'Total de comiss'#227'o '
+      Flat = True
+      OnClick = SpeedButton6Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 33
+    Width = 701
+    Height = 427
+    Align = alClient
+    TabOrder = 1
+    ExplicitTop = 39
   end
 end

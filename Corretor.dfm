@@ -12,24 +12,24 @@ object F_corretor: TF_corretor
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 208
-    Top = 112
+    Left = 240
+    Top = 96
     Width = 31
     Height = 15
     Caption = 'nome'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 208
-    Top = 158
+    Left = 240
+    Top = 142
     Width = 31
     Height = 15
     Caption = 'senha'
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 208
-    Top = 208
+    Left = 240
+    Top = 192
     Width = 23
     Height = 15
     Caption = 'cred'
@@ -69,41 +69,32 @@ object F_corretor: TF_corretor
         Visible = True
       end>
   end
-  object B_voltar: TButton
-    Left = 0
-    Top = 54
-    Width = 97
-    Height = 25
-    Caption = 'voltar'
-    TabOrder = 1
-    OnClick = B_voltarClick
-  end
   object DBEdit1: TDBEdit
-    Left = 208
-    Top = 133
+    Left = 240
+    Top = 117
     Width = 200
     Height = 23
     DataField = 'nome'
     DataSource = D_corretor
-    TabOrder = 2
+    TabOrder = 1
   end
   object DBEdit2: TDBEdit
-    Left = 208
-    Top = 179
+    Left = 240
+    Top = 163
     Width = 200
     Height = 23
     DataField = 'senha'
     DataSource = D_corretor
-    TabOrder = 3
+    TabOrder = 2
   end
   object DBEdit3: TDBEdit
-    Left = 208
-    Top = 229
+    Left = 240
+    Top = 213
     Width = 200
     Height = 23
     DataField = 'cred'
     DataSource = D_corretor
-    TabOrder = 4
+    TabOrder = 3
   end
   object DBNavigator1: TDBNavigator
     Left = 0
@@ -113,9 +104,8 @@ object F_corretor: TF_corretor
     DataSource = D_corretor
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbRefresh, nbCancelUpdates]
     Align = alTop
-    TabOrder = 5
-    ExplicitLeft = -16
-    ExplicitTop = 8
+    TabOrder = 4
+    ExplicitWidth = 622
   end
   object Q_corretor: TFDQuery
     Active = True

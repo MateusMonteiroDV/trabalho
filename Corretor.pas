@@ -15,7 +15,6 @@ type
     DBGrid1: TDBGrid;
     Q_corretor: TFDQuery;
     D_corretor: TDataSource;
-    B_voltar: TButton;
     Q_corretorcred: TLargeintField;
     Q_corretornome: TWideStringField;
     Q_corretorsenha: TIntegerField;
@@ -27,7 +26,7 @@ type
     DBEdit3: TDBEdit;
     DBNavigator1: TDBNavigator;
 
-    procedure B_voltarClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -42,15 +41,6 @@ uses Login,Menu;
 {$R *.dfm}
 
 
-procedure TF_corretor.B_voltarClick(Sender: TObject);
-var
-menu : TF_Menu;
 
-begin
-    Self.Hide;
-    menu := TF_Menu.Create(nil);
-    menu.ShowModal;
-    menu.Free;
-end;
 
 end.

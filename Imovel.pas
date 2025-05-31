@@ -12,7 +12,6 @@ uses
 
 type
   TF_imovel = class(TForm)
-    B_voltar: TButton;
     DBGrid1: TDBGrid;
     Q_imovel: TFDQuery;
     D_imovel: TDataSource;
@@ -27,7 +26,7 @@ type
     Label3: TLabel;
     DBEdit3: TDBEdit;
     DBNavigator1: TDBNavigator;
-    procedure B_voltarClick(Sender: TObject);
+
 
   private
     { Private declarations }
@@ -43,19 +42,5 @@ uses Login, Menu;
 {$R *.dfm}
 
 
-
-procedure TF_imovel.B_voltarClick(Sender: TObject);
-var
-
-menu: TF_menu;
-
-begin
-  Self.Hide;
-  menu := TF_menu.Create(nil);
-  menu.ShowModal;
-  menu.Free;
-
-
-end;
 
 end.

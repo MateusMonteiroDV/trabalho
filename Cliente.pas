@@ -12,7 +12,6 @@ uses
 
 type
   TF_cliente = class(TForm)
-    Button1: TButton;
     DBGrid1: TDBGrid;
     Q_cliente: TFDQuery;
     D_cliente: TDataSource;
@@ -23,7 +22,6 @@ type
     Label2: TLabel;
     DBEdit2: TDBEdit;
     DBNavigator1: TDBNavigator;
-    procedure Button1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -38,17 +36,7 @@ implementation
  uses Login , Menu;
 {$R *.dfm}
 
-procedure TF_cliente.Button1Click(Sender: TObject);
-var
- menu: TF_menu;
 
-begin
-
-     Self.Hide;
-     menu := TF_menu.Create(nil);
-     menu.ShowModal;
-     menu.Free;
-end;
 
 
 end.
