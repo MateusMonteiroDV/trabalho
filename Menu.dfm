@@ -18,7 +18,6 @@ object F_Menu: TF_Menu
     Height = 33
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 782
     object SpeedButton1: TSpeedButton
       AlignWithMargins = True
       Left = 24
@@ -73,6 +72,5 @@ object F_Menu: TF_Menu
     Height = 427
     Align = alClient
     TabOrder = 1
-    ExplicitTop = 39
   end
 end

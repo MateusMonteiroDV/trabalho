@@ -45,17 +45,7 @@ implementation
 procedure OpenCliente(var form: TF_cliente);
 begin
 
-  if not Assigned(form) then
-  begin
-    form := TF_cliente.Create(nil);
-    form.BorderStyle := bsNone;
-    form.BorderIcons := [];
-    form.Parent := F_Menu.Panel2;
-    form.Align := alClient;
-    form.Show;
-  end
-  else
-  begin
+
     form.Free;
     form := nil;
 
@@ -65,26 +55,12 @@ begin
     form.Parent := F_Menu.Panel2;
     form.Align := alClient;
     form.Show;
-
-
-
-  end;
 end;
 
 procedure OpenCorretor(var form: TF_corretor);
 begin
 
-  if not Assigned(form) then
-  begin
-    form := TF_corretor.Create(nil);
-    form.BorderStyle := bsNone;
-    form.BorderIcons := [];
-    form.Parent := F_Menu.Panel2;
-    form.Align := alClient;
-    form.Show;
-  end
-  else
-  begin
+
     form.Free;
     form := nil;
 
@@ -94,22 +70,11 @@ begin
     form.Parent := F_Menu.Panel2;
     form.Align := alClient;
     form.Show;
-  end;
+
 end;
 procedure OpenImovel(var form: TF_imovel);
 begin
 
-  if not Assigned(form) then
-  begin
-    form := TF_imovel.Create(nil);
-    form.BorderStyle := bsNone;
-    form.BorderIcons := [];
-    form.Parent := F_Menu.Panel2;
-    form.Align := alClient;
-    form.Show;
-  end
-  else
-  begin
     form.Free;
     form := nil;
 
@@ -119,23 +84,12 @@ begin
     form.Parent := F_Menu.Panel2;
     form.Align := alClient;
     form.Show;
-  end;
 end;
 
  procedure OpenProposta(var form: TF_proposta);
 begin
 
-  if not Assigned(form) then
-  begin
-    form := TF_proposta.Create(nil);
-    form.BorderStyle := bsNone;
-    form.BorderIcons := [];
-    form.Parent := F_Menu.Panel2;
-    form.Align := alClient;
-    form.Show;
-  end
-  else
-  begin
+
     form.Free;
     form := nil;
 
@@ -146,24 +100,13 @@ begin
     form.Parent := F_Menu.Panel2;
     form.Align := alClient;
     form.Show;
-  end;
+
 end;
 
 procedure OpenComissao(var form: TF_comissao);
 begin
 
-  if not Assigned(form) then
-  begin
-    form := TF_comissao.Create(nil);
-    form.BorderStyle := bsNone;
-    form.BorderIcons := [];
-    form.Parent := F_Menu.Panel2;
-    form.Align := alClient;
 
-    form.Show;
-  end
-  else
-  begin
     form.Free;
     form := nil;
 
@@ -173,7 +116,7 @@ begin
     form.Parent := F_Menu.Panel2;
     form.Align := alClient;
     form.Show;
-  end;
+
 end;
 
 

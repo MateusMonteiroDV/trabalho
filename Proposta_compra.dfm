@@ -12,24 +12,24 @@ object F_proposta: TF_proposta
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 208
-    Top = 56
+    Left = 192
+    Top = 72
     Width = 29
     Height = 15
     Caption = 'CRED'
     FocusControl = DBEdit1
   end
   object Label3: TLabel
-    Left = 208
-    Top = 152
+    Left = 192
+    Top = 168
     Width = 21
     Height = 15
     Caption = 'CPF'
     FocusControl = DBEdit3
   end
   object Label4: TLabel
-    Left = 208
-    Top = 200
+    Left = 192
+    Top = 216
     Width = 76
     Height = 15
     Caption = 'valor_ofertado'
@@ -44,8 +44,8 @@ object F_proposta: TF_proposta
     FocusControl = DBEdit5
   end
   object Label2: TLabel
-    Left = 208
-    Top = 104
+    Left = 192
+    Top = 120
     Width = 36
     Height = 15
     Caption = 'Imovel'
@@ -59,11 +59,10 @@ object F_proposta: TF_proposta
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 622
   end
   object DBEdit1: TDBEdit
-    Left = 208
-    Top = 72
+    Left = 192
+    Top = 88
     Width = 229
     Height = 23
     DataField = 'id_corretor'
@@ -71,8 +70,8 @@ object F_proposta: TF_proposta
     TabOrder = 1
   end
   object DBEdit3: TDBEdit
-    Left = 208
-    Top = 168
+    Left = 192
+    Top = 184
     Width = 229
     Height = 23
     DataField = 'id_cliente'
@@ -80,8 +79,8 @@ object F_proposta: TF_proposta
     TabOrder = 2
   end
   object DBEdit4: TDBEdit
-    Left = 208
-    Top = 219
+    Left = 192
+    Top = 235
     Width = 229
     Height = 23
     DataField = 'valor_ofertado'
@@ -98,8 +97,8 @@ object F_proposta: TF_proposta
     TabOrder = 4
   end
   object B_imovel: TDBLookupComboBox
-    Left = 208
-    Top = 125
+    Left = 192
+    Top = 141
     Width = 229
     Height = 23
     DataField = 'id_imovel'
@@ -150,6 +149,7 @@ object F_proposta: TF_proposta
         Alignment = taLeftJustify
         Expanded = False
         FieldName = 'comissao'
+        Width = 150
         Visible = True
       end>
   end
@@ -235,7 +235,7 @@ object F_proposta: TF_proposta
       'join cliente cl on p.id_cliente = cl.cpf'
       'join imovel im on p.id_corretor = im.id;')
     Left = 496
-    Top = 200
+    Top = 176
     object Q_listar_propostacorretor: TWideStringField
       FieldName = 'corretor'
       Origin = 'corretor'
@@ -269,6 +269,6 @@ object F_proposta: TF_proposta
   object D_listar_proposta: TDataSource
     DataSet = Q_listar_proposta
     Left = 496
-    Top = 264
+    Top = 240
   end
 end
