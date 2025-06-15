@@ -12,24 +12,24 @@ object F_corretor: TF_corretor
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 240
-    Top = 96
+    Left = 200
+    Top = 88
     Width = 31
     Height = 15
     Caption = 'nome'
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 240
-    Top = 142
+    Left = 200
+    Top = 134
     Width = 31
     Height = 15
     Caption = 'senha'
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 240
-    Top = 192
+    Left = 200
+    Top = 184
     Width = 23
     Height = 15
     Caption = 'cred'
@@ -70,8 +70,8 @@ object F_corretor: TF_corretor
       end>
   end
   object DBEdit1: TDBEdit
-    Left = 240
-    Top = 117
+    Left = 200
+    Top = 109
     Width = 200
     Height = 23
     DataField = 'nome'
@@ -79,8 +79,8 @@ object F_corretor: TF_corretor
     TabOrder = 1
   end
   object DBEdit2: TDBEdit
-    Left = 240
-    Top = 163
+    Left = 200
+    Top = 155
     Width = 200
     Height = 23
     DataField = 'senha'
@@ -88,8 +88,8 @@ object F_corretor: TF_corretor
     TabOrder = 2
   end
   object DBEdit3: TDBEdit
-    Left = 240
-    Top = 213
+    Left = 200
+    Top = 205
     Width = 200
     Height = 23
     DataField = 'cred'
@@ -105,10 +105,11 @@ object F_corretor: TF_corretor
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbRefresh, nbCancelUpdates]
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 622
   end
   object Q_corretor: TFDQuery
     Active = True
+    AfterPost = Q_corretorAfterPost
+    AfterDelete = Q_corretorAfterDelete
     CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (

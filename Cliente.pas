@@ -22,6 +22,8 @@ type
     Label2: TLabel;
     DBEdit2: TDBEdit;
     DBNavigator1: TDBNavigator;
+    procedure Q_clienteAfterPost(DataSet: TDataSet);
+    procedure Q_clienteAfterDelete(DataSet: TDataSet);
 
   private
     { Private declarations }
@@ -38,5 +40,16 @@ implementation
 
 
 
+
+procedure TF_cliente.Q_clienteAfterDelete(DataSet: TDataSet);
+begin
+    Q_cliente.ApplyUpdates(0);
+end;
+
+procedure TF_cliente.Q_clienteAfterPost(DataSet: TDataSet);
+begin
+  Q_cliente.ApplyUpdates(0);
+
+end;
 
 end.

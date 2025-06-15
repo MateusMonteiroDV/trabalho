@@ -12,7 +12,7 @@ object F_imovel: TF_imovel
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 256
+    Left = 192
     Top = 104
     Width = 37
     Height = 15
@@ -20,7 +20,7 @@ object F_imovel: TF_imovel
     FocusControl = DBEdit1
   end
   object Label2: TLabel
-    Left = 256
+    Left = 192
     Top = 152
     Width = 49
     Height = 15
@@ -28,7 +28,7 @@ object F_imovel: TF_imovel
     FocusControl = DBEdit2
   end
   object Label3: TLabel
-    Left = 256
+    Left = 192
     Top = 200
     Width = 21
     Height = 15
@@ -74,7 +74,7 @@ object F_imovel: TF_imovel
       end>
   end
   object DBEdit1: TDBEdit
-    Left = 256
+    Left = 192
     Top = 125
     Width = 200
     Height = 23
@@ -83,7 +83,7 @@ object F_imovel: TF_imovel
     TabOrder = 1
   end
   object DBEdit2: TDBEdit
-    Left = 256
+    Left = 192
     Top = 168
     Width = 200
     Height = 23
@@ -92,7 +92,7 @@ object F_imovel: TF_imovel
     TabOrder = 2
   end
   object DBEdit3: TDBEdit
-    Left = 256
+    Left = 192
     Top = 216
     Width = 200
     Height = 23
@@ -109,10 +109,11 @@ object F_imovel: TF_imovel
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 622
   end
   object Q_imovel: TFDQuery
     Active = True
+    AfterPost = Q_imovelAfterPost
+    AfterDelete = Q_imovelAfterDelete
     CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (

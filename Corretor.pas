@@ -25,6 +25,8 @@ type
     Label3: TLabel;
     DBEdit3: TDBEdit;
     DBNavigator1: TDBNavigator;
+    procedure Q_corretorAfterPost(DataSet: TDataSet);
+    procedure Q_corretorAfterDelete(DataSet: TDataSet);
 
 
   private
@@ -42,5 +44,15 @@ uses Login,Menu;
 
 
 
+
+procedure TF_corretor.Q_corretorAfterDelete(DataSet: TDataSet);
+begin
+   Q_corretor.ApplyUpdates(0);
+end;
+
+procedure TF_corretor.Q_corretorAfterPost(DataSet: TDataSet);
+begin
+   Q_corretor.ApplyUpdates(0);
+end;
 
 end.

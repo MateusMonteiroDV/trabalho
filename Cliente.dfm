@@ -80,10 +80,11 @@ object F_cliente: TF_cliente
     VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 622
   end
   object Q_cliente: TFDQuery
     Active = True
+    AfterPost = Q_clienteAfterPost
+    AfterDelete = Q_clienteAfterDelete
     CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (

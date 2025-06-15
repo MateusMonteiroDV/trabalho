@@ -26,6 +26,8 @@ type
     Label3: TLabel;
     DBEdit3: TDBEdit;
     DBNavigator1: TDBNavigator;
+    procedure Q_imovelAfterPost(DataSet: TDataSet);
+    procedure Q_imovelAfterDelete(DataSet: TDataSet);
 
 
   private
@@ -42,5 +44,15 @@ uses Login, Menu;
 {$R *.dfm}
 
 
+
+procedure TF_imovel.Q_imovelAfterDelete(DataSet: TDataSet);
+begin
+           Q_imovel.ApplyUpdates(0);
+end;
+
+procedure TF_imovel.Q_imovelAfterPost(DataSet: TDataSet);
+begin
+  Q_imovel.ApplyUpdates(0);
+end;
 
 end.

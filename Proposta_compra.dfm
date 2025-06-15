@@ -156,6 +156,8 @@ object F_proposta: TF_proposta
   object Q_proposta: TFDQuery
     Active = True
     AfterPost = Q_propostaAfterPost
+    AfterDelete = Q_propostaAfterDelete
+    CachedUpdates = True
     Connection = F_login.FDConnection1
     SQL.Strings = (
       'select * from proposta_compra;')

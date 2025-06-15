@@ -45,6 +45,7 @@ type
     Q_listar_propostacliente: TWideStringField;
     Q_listar_propostacomissao: TBCDField;
     procedure Q_propostaAfterPost(DataSet: TDataSet);
+    procedure Q_propostaAfterDelete(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -58,9 +59,15 @@ implementation
 uses Login, Menu;
 {$R *.dfm}
 
+procedure TF_proposta.Q_propostaAfterDelete(DataSet: TDataSet);
+begin
+      Q_proposta.ApplyUpdates(0);
+end;
+
 procedure TF_proposta.Q_propostaAfterPost(DataSet: TDataSet);
 begin
-
+  Q_proposta.ApplyUpdates(0);
+  Q_proposta.CommitUpdates;
   Q_listar_proposta.Refresh;
   DataSet.Refresh;
 end;
